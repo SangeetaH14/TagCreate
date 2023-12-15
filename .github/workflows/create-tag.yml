@@ -16,6 +16,7 @@ on:
 env:
   APINAME : "TagCreate"
   JIRA_VERSION : "TagCreate_1-0-0"
+  latest_tagname : ""
         
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,6 +24,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -41,6 +45,6 @@ jobs:
         run: |
           echo "${APINAME}" 
           echo "${JIRA_VERSION}"
-
-         # number=`"("$JIRA_VERSION"_rc)\\K(\\d+)" | sort -n | tail -n 1 || true`
-        
+          
+      - name: Run a script
+        run: ./createTag.sh
