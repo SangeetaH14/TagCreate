@@ -43,6 +43,4 @@ jobs:
           echo "${JIRA_VERSION}"
 
          # number=`"("$JIRA_VERSION"_rc)\\K(\\d+)" | sort -n | tail -n 1 || true`
-          
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        
