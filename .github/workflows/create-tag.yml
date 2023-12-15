@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./scripts
+        working-directory: TagCreate/scripts
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -47,4 +47,4 @@ jobs:
           echo "${JIRA_VERSION}"
           
       - name: Run a script
-        run: ./createTag.sh
+        run: TagCreate/scripts/createTag.sh
