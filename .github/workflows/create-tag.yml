@@ -35,8 +35,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          APINAME= "TagCreate"
-          JIRA_VERSION= "TagCreate_1-0-0"
+          APINAME = "TagCreate"
+          JIRA_VERSION = "TagCreate_1-0-0"
           echo "${APINAME}" 
           
           echo Add other actions to build,
